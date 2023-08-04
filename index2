@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ron Ziser</title>
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    
+    <div id="home">
+    <div class="slideshow-container">
+        <div class="slideshow-wrapper">
+            
+        </div>
+    </div>
+</div>
+
+<script>
+
+document.getElementById("home").onclick = function() {turnOnMenu()};
+
+function turnOnMenu() {
+    window.location.href = "menu.html";
+}
+
+document.getElementsByClassName("slideshow-container").onclick = function() {turnOnMenu()};
+
+function turnOnMenu() {
+    window.location.href = "menu.html";
+}
+
+const images = ['Artboard_01.jpg', 'Artboard_02.jpg', 'Artboard_03.jpg', 'Artboard_04.jpg'];
+let currentIndex = 0;
+
+function changeImage() {
+  currentIndex++;
+  if (currentIndex === images.length) {
+    currentIndex = 0;
+  }
+  const imgElement = document.getElementById('slideshow-img');
+  imgElement.src = images[currentIndex];
+}
+
+setInterval(changeImage, 3000);
+
+
+</script>
+
+</body>
+</html>
