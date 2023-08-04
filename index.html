@@ -13,43 +13,37 @@
 <body>
     
     <div id="home">
-    <div class="slideshow-container">
-        <div class="slideshow-wrapper">
-            
+        <div class="image-wrapper">
+            <img id="slideshow-img" src="Artboard_01.jpg" alt="Ron Ziser Artwork">
         </div>
     </div>
-</div>
 
-<script>
-
-document.getElementById("home").onclick = function() {turnOnMenu()};
-
-function turnOnMenu() {
-    window.location.href = "menu.html";
-}
-
-document.getElementsByClassName("slideshow-container").onclick = function() {turnOnMenu()};
-
-function turnOnMenu() {
-    window.location.href = "menu.html";
-}
-
-const images = ['Artboard_01.jpg', 'Artboard_02.jpg', 'Artboard_03.jpg', 'Artboard_04.jpg'];
-let currentIndex = 0;
-
-function changeImage() {
-  currentIndex++;
-  if (currentIndex === images.length) {
-    currentIndex = 0;
-  }
-  const imgElement = document.getElementById('slideshow-img');
-  imgElement.src = images[currentIndex];
-}
-
-setInterval(changeImage, 3000);
-
-
-</script>
+    <script>
+        document.getElementById("home").onclick = function() {turnOnMenu()};
+        
+        function turnOnMenu() {
+            window.location.href = "menu.html";
+        }
+        
+        // Removed duplicated function
+        
+        const images = ['Artboard_01.jpg', 'Artboard_02.jpg', 'Artboard_03.jpg', 'Artboard_04.jpg'];
+        let currentIndex = 0;
+        
+        function changeImage() {
+          currentIndex++;
+          if (currentIndex === images.length) {
+            currentIndex = 0;
+          }
+          const imgElement = document.getElementById('slideshow-img');
+          imgElement.src = images[currentIndex];
+        }
+        
+        setInterval(changeImage, 3000);
+    </script>
 
 </body>
 </html>
+
+
+
