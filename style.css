@@ -22,8 +22,8 @@ p {
     margin-bottom: 2rem;
 }
 
-#cv-details br {
-    margin-bottom: 5rem; /* Adjust the value to control the spacing between lines */
+#cv-details p {
+    margin-bottom: 2rem; /* Adjust as needed */
 }
 
 
