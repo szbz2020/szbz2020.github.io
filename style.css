@@ -22,9 +22,10 @@ p {
     margin-bottom: 2rem;
 }
 
-#cv-details {
-	line-height:2rem;
+#cv-details br {
+    margin-bottom: 1rem; /* Adjust the value to control the spacing between lines */
 }
+
 
 /* menu */
 
@@ -282,9 +283,7 @@ p {
     line-height: 1vmax;
 }
 
-	#cv-details {
-	line-height:2vmax;
-}
+	
 
 h1 {
     font-size: 1vmax;
