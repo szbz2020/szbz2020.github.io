@@ -280,6 +280,10 @@ p {
     line-height: 1vmax;
 }
 
+	#cv-details p {
+    margin-bottom: 1rem; /* Adjust as needed */
+}
+
 	
 
 h1 {
