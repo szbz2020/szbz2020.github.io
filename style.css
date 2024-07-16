@@ -23,7 +23,7 @@ p {
 }
 
 #cv-details p {
-    margin-bottom: 2rem; /* Adjust as needed */
+    margin-bottom: 1rem; /* Adjust as needed */
 }
 
 
@@ -277,7 +277,7 @@ img{
 
 p {
     margin-bottom: 2vmax;
-    line-height: 1vmax;
+    
 }
 
 	#cv-details p {
