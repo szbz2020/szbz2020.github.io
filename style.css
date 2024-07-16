@@ -352,3 +352,7 @@ h1 {
     }
     
 }
+
+#cv-details p {
+    margin-bottom: 5rem; /* Adjust as needed */
+}
