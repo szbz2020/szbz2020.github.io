@@ -1,0 +1,225 @@
+html {
+    font-size: 2vmax;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100&display=swap');
+
+body {
+    background-color: white;
+}
+
+h1 {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+p {
+    margin-bottom: 2rem;
+}
+
+/* menu */
+#menu {
+    width: 100vw;
+    height: 100vh;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 1s;
+}
+
+#menu-container {
+    width: 20rem;
+    height: auto;
+    text-align: center;
+}
+
+#menu a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    margin-bottom: calc(20px + .5vw);
+    font-size: calc(20px + .5vw);
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-weight: 100;
+}
+
+@keyframes fadeInOpacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* home page container */
+#home {
+    width: 100vw;
+    height: 100vh;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* home page slideshow */
+.slideshow-container {
+    background-repeat: no-repeat;
+    background-color: white;
+}
+
+.slideshow-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#static-img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure the image doesn't exceed the container width */
+    max-height: 100%; /* Ensure the image doesn't exceed the container height */
+    object-fit: contain; /* Ensure the image scales without distortion */
+}
+
+img {
+    width: 100%;
+}
+
+/* about page */
+#close-button {
+    background-color: transparent;
+    border-color: transparent;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    border-style: solid;
+    border-collapse: separate;
+    text-align: center;
+    vertical-align: auto;
+    transform: rotate(45deg);
+    cursor: pointer;
+    position: fixed;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+
+#close-button:hover {
+    color: white;
+}
+
+@media screen and (orientation: landscape) {
+    #home {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .slideshow-container {
+        width: 30vmax;
+        height: 30vmax;
+        margin-left: 20vmax;
+        margin-right: 20vmax;
+    }
+
+    #close-button {
+        margin-right: 15%;
+        margin-left: 85%;
+        margin-top: 2vmax;
+        width: 6vmax;
+        height: 6vmax;
+        font-size: 6vmax;
+    }
+
+    #about-page {
+        width: 100vw;
+        height: auto;
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1vmax;
+        opacity: 1;
+        animation-name: fadeInOpacity;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in;
+        animation-duration: 1s;
+    }
+
+    #about-container {
+        margin-top: 10vmin;
+        width: auto;
+        margin-left: 30%;
+        margin-right: 30%;
+        text-align: left;
+    }
+
+    #last-paragraph {
+        margin-bottom: 7rem;
+    }
+
+    p {
+        margin-bottom: 2vmax;
+    }
+
+    h1 {
+        font-size: 1vmax;
+        margin-bottom: 2vmax;
+    }
+}
+
+@media screen and (orientation: portrait) {
+    #home {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .slideshow-container {
+        width: 70vmin;
+        height: 70vmin;
+        margin-left: 13vmin;
+        margin-right: 17vmin;
+    }
+
+    #close-button {
+        margin-right: 30%;
+        margin-top: 2vmax;
+        width: 12vmax;
+        height: 12vmax;
+        margin-left: 70%;
+        font-size: 8vmax;
+    }
+
+    #about-page {
+        width: 100vw;
+        height: auto;
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3vmin;
+    }
+
+    #about-container {
+        margin-top: 8rem;
+        width: auto;
+        margin-left: 10%;
+        margin-right: 10%;
+        text-align: left;
+    }
+
+    #last-paragraph {
+        margin-bottom: 7rem;
+    }
+
+    h1 {
+        font-size: 3vmin;
+    }
+}
