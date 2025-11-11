@@ -1,272 +1,38 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100&display=swap');
-
-html {
-    
-    font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
+/* Remove margins and padding from the whole page */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
-
-body {
-	background-color: white;
-}
-
-
-p {
-    margin-bottom: 1rem;
-    font-size: 16px;
-}
-
-a {
-    color: black; /* Set to your desired color */
-    
-}
-
-h1 {
-    font-size: 16px;
-    
-}
-
-
-
-/* standard page */
-
-#about-page {
-    width: 100vw;
-    height: auto;
-    background: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 1;
-    animation-name: fadeInOpacity;
-	animation-iteration-count: 1;
-    animation-timing-function: ease-in;
-	animation-duration: 1s;
-
-}
-
-#about-container {
-    margin-top: 10vmin;
-    width: auto;
-    margin-left: 30%;
-    margin-right: 30%;
-    margin-bottom: 10%;
-    text-align: left;
-     
-}
-
-
-.cv-sections {
-    margin: 2rem 0rem 2rem 0rem;
-}
-
-#cv-details p {
-    margin-bottom: 0.5rem; /* Adjust as needed */
-}
-
-
-#born-date {
-    margin: 1.5rem 0rem 2.5rem 0rem;
-}
-
-img {
-    width: 100%;
-}
-
-#close-button {
-    background-color: transparent;
-    border-color: transparent;
-    font-family: 'Zen Maru Gothic', sans-serif;
-    border-style: solid;
-    border-collapse: separate; 
-    text-align: center;
-    vertical-align: auto;
-    transform: rotate(45deg);
-    cursor: pointer;
-    position: fixed;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    margin: 5% 15% 0% 85%;
-    font-size: 50px;
-
-}
-
-
-#close-button a {
-    text-decoration: none;
-}
-	
-
-
-@keyframes fadeInOpacity {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-}
-
-
-
-
-/* home page */
-
+/* Container styling */
 #home {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Fullscreen image with no pointer cursor */
+#static-img {
+  display: block;
+  width: 100vw;       /* full viewport width */
+  height: 100vh;      /* full viewport height */
+  object-fit: cover;  /* crops image nicely to fill */
+  cursor: default;    /* removes the hand cursor */
+}
+
+/* Landscape layout */
+@media screen and (orientation: landscape) {
+  #home {
     width: 100vw;
     height: 100vh;
-    background: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    
   }
-
-  .slideshow-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 70vmin;
-    height: 70vmin;
-    margin-left: 13vmin;
-    margin-right: 17vmin;
 }
 
-
-
- /* home page slideshow */
-/*
-.slideshow-container {
-    background-repeat: no-repeat;
-    transition: all .8s ease-in-out;
-    animation: slide 12s infinite;
-    background-color: white;
-    animation-delay: 0s;
-}
-
-.slideshow-wrapper {
-    color: white;
-    background-color: white(0, 0, 0, 0.5);
-    transition: all .12s ease-in-out;
-}
-
-@keyframes slide {
-    0%{
-    opacity: 0;
-    background-image: url("Artboard_01.jpg");
-    background-size: contain;
-    }
-    20%{
-    opacity: 1;
-    background-image: url("Artboard_01.jpg");
-    background-size: contain;
-    }
-    25%{
-    opacity: 0;
-    background-image: url("Artboard_01.jpg");
-    background-size: contain;
-    }
-    25.1%{
-    opacity: 0;
-    background-image: url("Artboard_02.jpg");
-    background-size: contain;
-    }
-    45%{
-    opacity: 1;
-    background-image: url("Artboard_02.jpg");
-    background-size: contain;
-    }
-    50%{
-    opacity: 0;
-    background-image: url("Artboard_02.jpg");
-    background-size: contain;
-    }
-    50.01%{
-    opacity: 0;
-    background-image: url("Artboard_01.jpg");
-    background-size: contain;
-    }
-    70%{
-    opacity: 1;
-    background-image: url("Artboard_01.jpg");
-    background-size: contain;
-    }
-    75%{
-    opacity: 0;
-    background-image: url("Artboard_01.jpg");
-    background-size: contain;
-    }
-    75.01%{
-    opacity: 0;
-    background-image: url("Artboard_02.jpg");
-    background-size: contain;
-    }
-    95%{
-    opacity: 1;
-    background-image: url("Artboard_02.jpg");
-    background-size: contain;
-    }
-    100%{
-    opacity: 0;
-    background-image: url("Artboard_02.jpg");
-    background-size: contain;
-    }
-}
-*/
-
-
-
-
-
-@media screen and (orientation: landscape) {
-    #home {
-        width: 100vw;
-        height: 100vh;
-    }
-
-    .slideshow-container {
-        width: 30vmax;
-        height: 30vmax;
-        margin-left: 20vmax;
-        margin-right: 20vmax;
-    }
-
-    #about-container {
-        margin: 10% 30% 10% 30%;
-    }
-
-}
-
+/* Portrait layout */
 @media screen and (orientation: portrait) {
-    #home {
-       width: 100vw;
-       height: 100vh; 
-    }
-
-    .slideshow-container {    
-        width: 70vmin;
-        height: 70vmin;
-        margin-left: 13vmin;
-        margin-right: 17vmin;
-    }
-
-   
-    #about-container {
-        margin:30% 10% 20% 10%;
-        
-    }
-
-    /* Styles for phones */
-
-    @media (max-width: 600px) {
-
-        #close-button {
-        margin: 5% 30% 0% 75%;
-        font-size: 50px;
-        }
-    }
+  #home {
+    width: 100vw;
+    height: 100vh;
+  }
 }
