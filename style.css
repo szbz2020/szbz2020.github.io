@@ -1,23 +1,43 @@
-/* Make the page fill the viewport and remove default margins */
+/* Reset */
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
 }
 
-/* Centre the image in the middle of the page */
+/* Center content */
 body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: white; /* change if you want */
+  background-color: white;
 }
 
-/* Image styling */
+/* Default image size (for desktops/tablets) */
 #static-img {
-  max-width: 100%;
-  height: auto;
-  cursor: default; /* normal arrow cursor */
+  width: 50vw;       /* 50% of viewport width */
+  height: auto;      /* keep proportions */
+  cursor: default;
+  max-width: 800px;  /* optional cap for very large screens */
 }
 
+/* Portrait phones */
+@media screen and (max-width: 600px) {
+  #static-img {
+    width: 80vw;     /* make image larger on small screens */
+  }
+}
 
+/* Landscape phones / small tablets */
+@media screen and (orientation: landscape) and (max-height: 600px) {
+  #static-img {
+    width: 60vw;     /* slightly smaller for horizontal phones */
+  }
+}
+
+/* Very large screens */
+@media screen and (min-width: 1600px) {
+  #static-img {
+    width: 40vw;     /* slightly smaller so it doesn’t dominate */
+  }
+}
