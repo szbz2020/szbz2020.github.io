@@ -3,41 +3,45 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
+  width: 100%;
 }
 
-/* Center content */
+/* Center the image absolutely within the viewport */
 body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-color: white;
+  position: relative;
 }
 
-/* Default image size (for desktops/tablets) */
+/* Image styling */
 #static-img {
-  width: 50vw;       /* 50% of viewport width */
-  height: auto;      /* keep proportions */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);  /* centers both axes */
+  width: 50vw;        /* default size on desktop */
+  height: auto;
+  max-width: 800px;
   cursor: default;
-  max-width: 800px;  /* optional cap for very large screens */
 }
 
 /* Portrait phones */
 @media screen and (max-width: 600px) {
   #static-img {
-    width: 80vw;     /* make image larger on small screens */
+    width: 80vw;
   }
 }
 
 /* Landscape phones / small tablets */
 @media screen and (orientation: landscape) and (max-height: 600px) {
   #static-img {
-    width: 60vw;     /* slightly smaller for horizontal phones */
+    width: 60vw;
   }
 }
 
 /* Very large screens */
 @media screen and (min-width: 1600px) {
   #static-img {
-    width: 40vw;     /* slightly smaller so it doesn’t dominate */
+    width: 40vw;
   }
 }
+
