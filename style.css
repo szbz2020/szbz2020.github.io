@@ -1,38 +1,28 @@
-/* Remove margins and padding from the whole page */
+/* Reset */
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
 }
 
-/* Container styling */
+/* Home container */
 #home {
-  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 100vh;
+  width: 100vw;
   overflow: hidden;
+  background-color: black; /* optional, just for contrast */
 }
 
-/* Fullscreen image with no pointer cursor */
+/* Image styling */
 #static-img {
-  display: block;
-  width: 100vw;       /* full viewport width */
-  height: 100vh;      /* full viewport height */
-  object-fit: cover;  /* crops image nicely to fill */
-  cursor: default;    /* removes the hand cursor */
-}
-
-/* Landscape layout */
-@media screen and (orientation: landscape) {
-  #home {
-    width: 100vw;
-    height: 100vh;
-  }
-}
-
-/* Portrait layout */
-@media screen and (orientation: portrait) {
-  #home {
-    width: 100vw;
-    height: 100vh;
-  }
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  cursor: default !important; /* force normal cursor */
+  pointer-events: none; /* ensures it can't be clicked */
 }
