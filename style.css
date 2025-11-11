@@ -1,29 +1,23 @@
-/* Reset */
+/* Make the page fill the viewport and remove default margins */
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  background-color: white;
 }
 
-/* Home container */
-#home {
+/* Centre the image in the middle of the page */
+body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 50vh;
-  width: 50vw;
-  margin: auto;
-  background-color: lightgray; /* just so you can see the boundaries */
-  border: 1px solid black;
+  background-color: white; /* change if you want */
 }
 
 /* Image styling */
 #static-img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  cursor: default !important;
-  pointer-events: none;
+  max-width: 100%;
+  height: auto;
+  cursor: default; /* normal arrow cursor */
 }
+
 
